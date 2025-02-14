@@ -1,0 +1,114 @@
+:root {
+    --color-primary: #1a4d2e;
+    --color-secondary: #437a1e;
+    --color-accent: #86c540;
+    --color-orange: #ff7043;
+    --color-orange-dark: #f4511e;
+    --shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(10px);
+}
+
+.navbar-nav .nav-link {
+    font-family: "Poppins", sans-serif !important;
+    position: relative;
+    color: var(--color-primary) !important;
+    font-weight: 500;
+    margin: 0 15px;
+    padding: 8px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(
+        90deg,
+        var(--color-accent),
+        var(--color-secondary)
+    );
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--color-secondary) !important;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+.btn {
+    font-family: "Poppins", sans-serif !important;
+    font-size: 1rem !important;
+    padding: 8px 24px !important;
+    border-radius: 25px !important;
+    transition: all 0.3s ease !important;
+    text-transform: none !important;
+}
+
+/* Login Button */
+.btn-outline-success {
+    color: var(--color-secondary) !important;
+    border: 2px solid var(--color-secondary) !important;
+    background: transparent !important;
+}
+
+.btn-outline-success:hover {
+    color: white !important;
+    background: var(--color-secondary) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(26, 77, 46, 0.2);
+}
+
+/* Logout Button */
+.btn-outline-danger {
+    color: #dc3545 !important;
+    border: 2px solid #dc3545 !important;
+    background: transparent !important;
+}
+
+.btn-outline-danger:hover {
+    color: white !important;
+    background: #dc3545 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(220, 53, 69, 0.2);
+}
+
+/* Donate Button */
+.btn-donate {
+    background: linear-gradient(
+        45deg,
+        var(--color-orange-dark),
+        var(--color-orange)
+    ) !important;
+    border: none !important;
+    padding: 10px 25px !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(244, 81, 30, 0.3) !important;
+    font-weight: 500 !important;
+}
+
+.btn-donate:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(244, 81, 30, 0.4) !important;
+}
+
+@media (max-width: 991px) {
+    .navbar-nav .nav-link {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .btn {
+        width: 200px !important;
+        margin: 8px auto !important;
+    }
+}

@@ -1,0 +1,113 @@
+.cardPile {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+.card {
+    flex: 1;
+    padding: 40px !important;
+    transition: all 0.3s ease !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    min-height: 450px;
+}
+
+.card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px;
+}
+
+.card-img {
+    width: 250px !important;
+    height: 250px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-img {
+    transform: scale(1.01);
+}
+
+.card p {
+    color: white !important;
+    font-size: 1.4rem !important;
+    font-weight: 500 !important;
+    padding: 0 20px;
+    max-width: 90%;
+    flex-grow: 1;
+    font-size: 1.4rem !important;
+    font-weight: 500 !important;
+    margin: 0;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    max-width: 90%;
+}
+.blue-btn {
+    background: #0a4a7b;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: none;
+    margin-top: auto;
+    box-shadow: 0 4px 15px rgba(10, 74, 123, 0.3);
+}
+
+.blue-btn:hover {
+    /* background: #1565c0; */
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(10, 74, 123, 0.4);
+}
+
+@media screen and (max-width: 900px) {
+    .cardPile {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+        width: 100%;
+        padding: 30px !important;
+    }
+
+    .card p {
+        font-size: 1.5rem !important;
+        margin: 0 0 25px 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .cardPile {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 25px !important;
+    }
+
+    .card p {
+        font-size: 1.3rem !important;
+        margin: 0 0 20px 0;
+        padding: 0 10px;
+    }
+
+    .blue-btn {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
+}
